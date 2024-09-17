@@ -137,3 +137,18 @@ console.log(basicOp("+", 4, 7), 11, "4 + 7 = 11");
 console.log(basicOp("-", 15, 18), -3, "15 - 18 = -3");
 console.log(basicOp("*", 5, 5), 25, "5 * 5 = 25");
 console.log(basicOp("/", 49, 7), 7, "49 / 7 = 7");
+
+/* #7
+You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+Array can contain numbers or strings. X can be either.
+Return true if the array contains the value, false if not.
+*/
+
+function check(a, x) {
+    return a.includes(x)
+  }
+
+  console.log(check([66, 101], 66), true);
+  console.log(check([101, 45, 75, 105, 99, 107], 107), true);
+  console.log(check(['t', 'e', 's', 't'], 'e'), true);
+  console.log(check(['what', 'a', 'great', 'kata'], 'kat'), false);
