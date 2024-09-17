@@ -172,3 +172,30 @@ console.log(hero(4, 5), false);
 console.log(hero(100, 40), true);
 console.log(hero(1500, 751), false);
 console.log(hero(0, 1), false);
+
+/* #9 
+Complete the solution so that it reverses all of the words within the string passed in.
+Words are separated by exactly one space and there are no leading or trailing spaces.
+
+Example(Input --> Output):
+"The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
+*/
+
+function reverseWords(str) {
+  const arr = str.split(" ");
+  let res = "";
+  for (let i = arr.length - 1; i >= 0; i -= 1) {
+    i === 0 ? (res += `${arr[i]}`) : (res += `${arr[i]} `);
+  }
+  return res;
+}
+
+console.log(reverseWords("hello world!"), "world! hello");
+console.log(
+  reverseWords("yoda doesn't speak like this"),
+  "this like speak doesn't yoda"
+);
+console.log(reverseWords("foobar"), "foobar");
+console.log(reverseWords("kata editor"), "editor kata");
+console.log(reverseWords("row row row your boat"), "boat your row row row");
+console.log(reverseWords(""), "");
