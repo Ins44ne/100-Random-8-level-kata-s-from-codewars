@@ -7,15 +7,14 @@ Hello, Mr. Spock
 */
 
 function sayHello(name) {
-    return `Hello, ${name}`
-  }
- console.log(sayHello('Mr. Spock'), 'Hello, Mr. Spock');
- console.log(sayHello('Captain Kirk'), 'Hello, Captain Kirk');
- console.log(sayHello('Liutenant Uhura'), 'Hello, Liutenant Uhura');
- console.log(sayHello('Dr. McCoy'), 'Hello, Dr. McCoy');
+  return `Hello, ${name}`;
+}
+console.log(sayHello("Mr. Spock"), "Hello, Mr. Spock");
+console.log(sayHello("Captain Kirk"), "Hello, Captain Kirk");
+console.log(sayHello("Liutenant Uhura"), "Hello, Liutenant Uhura");
+console.log(sayHello("Dr. McCoy"), "Hello, Dr. McCoy");
 
-
- /* #2
+/* #2
 Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero numbers.
 
 Examples:
@@ -26,20 +25,20 @@ Examples:
 */
 
 function isDivisible(n, x, y) {
-    if (n%x === 0){
-      if (n%y === 0){
-        return true
-      }
+  if (n % x === 0) {
+    if (n % y === 0) {
+      return true;
     }
-        return false
   }
+  return false;
+}
 
-  console.log(isDivisible(3,3,4),false);
-  console.log(isDivisible(12,3,4),true);
-  console.log(isDivisible(8,3,4),false);
-  console.log(isDivisible(48,3,4),true);
+console.log(isDivisible(3, 3, 4), false);
+console.log(isDivisible(12, 3, 4), true);
+console.log(isDivisible(8, 3, 4), false);
+console.log(isDivisible(48, 3, 4), true);
 
-  /* #3
+/* #3
   Create a function which answers the question "Are you playing banjo?".
 If your name starts with the letter "R" or lower case "r", you are playing banjo!
 
@@ -52,16 +51,18 @@ Names given are always valid strings.
 */
 
 function areYouPlayingBanjo(name) {
-    return (name[0].toLowerCase() === 'r') ? `${name} plays banjo` : `${name} does not play banjo` 
-    }
+  return name[0].toLowerCase() === "r"
+    ? `${name} plays banjo`
+    : `${name} does not play banjo`;
+}
 
-  console.log(areYouPlayingBanjo("Adam"), "Adam does not play banjo");
-  console.log(areYouPlayingBanjo("Paul"), "Paul does not play banjo");
-  console.log(areYouPlayingBanjo("Ringo"), "Ringo plays banjo");
-  console.log(areYouPlayingBanjo("bravo"), "bravo does not play banjo");
-  console.log(areYouPlayingBanjo("rolf"), "rolf plays banjo");
+console.log(areYouPlayingBanjo("Adam"), "Adam does not play banjo");
+console.log(areYouPlayingBanjo("Paul"), "Paul does not play banjo");
+console.log(areYouPlayingBanjo("Ringo"), "Ringo plays banjo");
+console.log(areYouPlayingBanjo("bravo"), "bravo does not play banjo");
+console.log(areYouPlayingBanjo("rolf"), "rolf plays banjo");
 
-  /* #4
+/* #4
   There was a test in your class and you passed it. Congratulations!
 But you're an ambitious person. You want to know if you're better than the average student in your class.
 You receive an array with your peers' test scores. Now calculate the average and compare your score!
@@ -72,12 +73,36 @@ Your points are not included in the array of your class's points. Do not forget 
 */
 
 function betterThanAverage(classPoints, yourPoints) {
-    return ((classPoints.reduce((acc, number) => acc + number, 0) / classPoints.length ) > yourPoints ? false : true)
-  }
-  
+  return classPoints.reduce((acc, number) => acc + number, 0) /
+    classPoints.length >
+    yourPoints
+    ? false
+    : true;
+}
 
-   console.log(betterThanAverage([2, 3], 5), true);
-   console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75), true);
-   console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9), false);
-   console.log(betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50), false);
-   console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21), false);
+console.log(betterThanAverage([2, 3], 5), true);
+console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75), true);
+console.log(betterThanAverage([12, 23, 34, 45, 56, 67, 78, 89, 90], 9), false);
+console.log(betterThanAverage([41, 75, 72, 56, 80, 82, 81, 33], 50), false);
+console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21), false);
+
+/* #5
+   Implement a function which convert the given boolean value into its string representation.
+   
+    Note: Only valid inputs will be given.
+*/
+
+function booleanToString(b) {
+  return `${b}`;
+}
+
+console.log(
+  booleanToString(true),
+  "true",
+  'When we pass in true, we want the string "true" as output'
+);
+console.log(
+  booleanToString(false),
+  "false",
+  'When we pass in false, we want the string "false" as output'
+);
