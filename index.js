@@ -120,18 +120,18 @@ Examples(Operator, value1, value2) --> output
 ('/', 49, 7) --> 7
 */
 
-function basicOp(operation, value1, value2){
-    switch(operation){
-        case '+':
-            return Number(value1 + value2)
-        case '-':
-            return Number(value1 - value2)
-        case '*':
-            return Number(value1 * value2)
-        case '/':
-            return Number(value1 / value2)
-    }
+function basicOp(operation, value1, value2) {
+  switch (operation) {
+    case "+":
+      return Number(value1 + value2);
+    case "-":
+      return Number(value1 - value2);
+    case "*":
+      return Number(value1 * value2);
+    case "/":
+      return Number(value1 / value2);
   }
+}
 
 console.log(basicOp("+", 4, 7), 11, "4 + 7 = 11");
 console.log(basicOp("-", 15, 18), -3, "15 - 18 = -3");
@@ -145,10 +145,30 @@ Return true if the array contains the value, false if not.
 */
 
 function check(a, x) {
-    return a.includes(x)
-  }
+  return a.includes(x);
+}
 
-  console.log(check([66, 101], 66), true);
-  console.log(check([101, 45, 75, 105, 99, 107], 107), true);
-  console.log(check(['t', 'e', 's', 't'], 'e'), true);
-  console.log(check(['what', 'a', 'great', 'kata'], 'kat'), false);
+console.log(check([66, 101], 66), true);
+console.log(check([101, 45, 75, 105, 99, 107], 107), true);
+console.log(check(["t", "e", "s", "t"], "e"), true);
+console.log(check(["what", "a", "great", "kata"], "kat"), false);
+
+/* #8
+  A hero is on his way to the castle to complete his mission. 
+  However, he's been told that the castle is surrounded with a couple of powerful dragons!
+  Each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry..
+  Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
+
+Return true if yes, false otherwise :)
+  */
+
+function hero(bullets, dragons) {
+  return !(dragons > bullets / 2);
+}
+
+console.log(hero(10, 5), true);
+console.log(hero(7, 4), false);
+console.log(hero(4, 5), false);
+console.log(hero(100, 40), true);
+console.log(hero(1500, 751), false);
+console.log(hero(0, 1), false);
