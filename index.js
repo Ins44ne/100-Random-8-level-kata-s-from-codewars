@@ -88,7 +88,7 @@ console.log(betterThanAverage([29, 55, 74, 60, 11, 90, 67, 28], 21), false);
 
 /* #5
    Implement a function which convert the given boolean value into its string representation.
-   
+
     Note: Only valid inputs will be given.
 */
 
@@ -106,3 +106,34 @@ console.log(
   "false",
   'When we pass in false, we want the string "false" as output'
 );
+
+/* №6
+Your task is to create a function that does four basic mathematical operations.
+
+The function should take three arguments - operation(string/char), value1(number), value2(number).
+The function should return result of numbers after applying the chosen operation.
+
+Examples(Operator, value1, value2) --> output
+('+', 4, 7) --> 11
+('-', 15, 18) --> -3
+('*', 5, 5) --> 25
+('/', 49, 7) --> 7
+*/
+
+function basicOp(operation, value1, value2){
+    switch(operation){
+        case '+':
+            return Number(value1 + value2)
+        case '-':
+            return Number(value1 - value2)
+        case '*':
+            return Number(value1 * value2)
+        case '/':
+            return Number(value1 / value2)
+    }
+  }
+
+console.log(basicOp("+", 4, 7), 11, "4 + 7 = 11");
+console.log(basicOp("-", 15, 18), -3, "15 - 18 = -3");
+console.log(basicOp("*", 5, 5), 25, "5 * 5 = 25");
+console.log(basicOp("/", 49, 7), 7, "49 / 7 = 7");
