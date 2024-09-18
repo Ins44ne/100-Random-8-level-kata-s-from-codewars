@@ -324,9 +324,24 @@ console.log(makeUpperCase(""), "");
 console.log(makeUpperCase("hello"), "HELLO");
 console.log(makeUpperCase("Hello"), "HELLO");
 console.log(makeUpperCase("HELLO"), "HELLO");
-/* #16
 
+/* #16
+Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
 */
+
+let removeExclamationMarks = (s) => s.replace(/!/g, "");
+
+function removeExclamationMarks(s) {
+  let res = "";
+  for (let i = 0; i < s.length; i += 1) {
+    if (s[i] !== "!") {
+      res += s[i];
+    }
+  }
+  return res;
+}
+
+console.log(removeExclamationMarks("Hello World!"), "Hello World");
 
 /* #17
 
