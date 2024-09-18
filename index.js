@@ -311,3 +311,35 @@ function greet(name, owner) {
 
 console.log(greet("Daniel", "Daniel"), "Hello boss");
 console.log(greet("Greg", "Daniel"), "Hello guest");
+
+/* #15
+Write a function which converts the input string to uppercase.
+*/
+
+function makeUpperCase(str) {
+  return str.toUpperCase();
+}
+
+console.log(makeUpperCase(""), "");
+console.log(makeUpperCase("hello"), "HELLO");
+console.log(makeUpperCase("Hello"), "HELLO");
+console.log(makeUpperCase("HELLO"), "HELLO");
+/* #16
+
+*/
+
+/* #17
+
+*/
+
+/* #18
+
+*/
+
+/* #19
+
+*/
+
+/* #20 
+
+*/
