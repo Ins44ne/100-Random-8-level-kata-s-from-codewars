@@ -488,8 +488,17 @@ console.log(divisibleBy([0, 1, 2, 3, 4, 5, 6], 4), [0, 4]);
 console.log(divisibleBy([0], 4), [0]);
 console.log(divisibleBy([1, 3, 5], 2), []);
 /* #24
+Bob needs a fast way to calculate the volume of a cuboid with three values: the length, width and height of the cuboid. Write a function to help Bob with this calculation.
  */
 
+class Kata {
+  static getVolumeOfCuboid(a, b, c) {
+    return a * b * c;
+  }
+}
+
+console.log(Kata.getVolumeOfCuboid(1, 2, 2), 4);
+console.log(Kata.getVolumeOfCuboid(6, 2, 5), 60);
 /* #25
  */
 
