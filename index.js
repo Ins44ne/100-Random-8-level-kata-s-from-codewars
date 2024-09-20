@@ -767,7 +767,27 @@ console.log(isValid([6, 7, 8]), false);
 console.log(isValid([7, 8]), true);
 
 /* #37
+Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+Examples (Input -> Output):
+* "String"      -> "SSttrriinngg"
+* "Hello World" -> "HHeelllloo  WWoorrlldd"
+* "1234!_ "     -> "11223344!!__  "
  */
+
+function doubleChar(str) {
+  let res = "";
+  str.split("").forEach((el) => {
+    res += el + el;
+  });
+  return res;
+}
+
+console.log(doubleChar("abcd"), "aabbccdd");
+console.log(doubleChar("Adidas"), "AAddiiddaass");
+console.log(doubleChar("1337"), "11333377");
+console.log(doubleChar("illuminati"), "iilllluummiinnaattii");
+console.log(doubleChar("123456"), "112233445566");
+console.log(doubleChar("%^&*("), "%%^^&&**((");
 
 /* #38
  */
