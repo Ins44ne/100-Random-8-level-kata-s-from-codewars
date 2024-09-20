@@ -695,7 +695,22 @@ console.log(enough(10, 5, 5), 0);
 console.log(enough(100, 60, 50), 10);
 console.log(enough(20, 5, 5), 0);
 /* #34
+You need to write a function that reverses the words in a given string. Words are always separated by a single space.
+As the input may have trailing spaces, you will also need to ignore unneccesary whitespace.
+Example (Input --> Output)
+"Hello World" --> "World Hello"
+"Hi There." --> "There. Hi"
+ */
 
+function reverse(string) {
+  return string.split(" ").reverse().join(" ");
+}
+
+console.log(reverse("I am an expert at this"), "this at expert an am I");
+console.log(reverse("This is so easy"), "easy so is This");
+console.log(reverse("no one cares"), "cares one no");
+console.log(reverse(""), "");
+console.log(reverse("CodeWars"), "CodeWars");
 
 /* #35
  */
