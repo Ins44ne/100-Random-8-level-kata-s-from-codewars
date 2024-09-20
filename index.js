@@ -651,3 +651,49 @@ function grader(score) {
 console.log(grader(0.7), "C");
 console.log(grader(0.9), "A");
 console.log(grader(0.6), "D");
+
+/* #32
+Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+Example:
+["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+None of the arrays will be empty, so you don't have to worry about that!
+ */
+function removeEveryOther(arr) {
+  return arr.filter(function (el, ind) {
+    return ind % 2 === 0;
+  });
+}
+
+console.log(removeEveryOther(["Hello", "Goodbye", "Hello Again"]), [
+  "Hello",
+  "Hello Again",
+]);
+console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), [1, 3, 5, 7, 9]);
+console.log(removeEveryOther([[1, 2]]), [[1, 2]]);
+console.log(removeEveryOther([["Goodbye"], { Great: "Job" }]), [["Goodbye"]]);
+/* #33
+ */
+
+/* #34
+ */
+
+/* #35
+ */
+
+/* #36
+ */
+
+/* #37
+ */
+
+/* #38
+ */
+
+/* #39
+ */
+
+/* #40
+ */
+
+/* #41
+ */
