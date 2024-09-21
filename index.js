@@ -935,7 +935,27 @@ console.log(
 );
 
 /* #43
+Description:
+Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string. For a beginner kata, you can assume that the input data is always a non empty string, no need to verify it.
+Examples
+"Hi!"     ---> "Hi!"
+"Hi!!!"   ---> "Hi!"
+"!Hi"     ---> "Hi!"
+"!Hi!"    ---> "Hi!"
+"Hi! Hi!" ---> "Hi Hi!"
+"Hi"      ---> "Hi!"
  */
+
+function remove(string) {
+  return `${string.replace(/!/g, "")}!`;
+}
+
+console.log(doTest("Hi!", "Hi!"));
+console.log(doTest("Hi!!!", "Hi!"));
+console.log(doTest("!Hi", "Hi!"));
+console.log(doTest("!Hi!", "Hi!"));
+console.log(doTest("Hi! Hi!", "Hi Hi!"));
+console.log(doTest("Hi", "Hi!"));
 
 /* #44
  */
