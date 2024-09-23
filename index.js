@@ -1320,7 +1320,24 @@ console.log(countSheeps()[
 ]);
 
 /* #54
+Wilson primes satisfy the following condition. Let 
+P
+P represent a prime number.
+Then,
+(P−1)!+1/P∗P 
+​should give a whole number, where P! is the factorial of P.
+Your task is to create a function that returns true if the given number is a Wilson prime and false otherwise.
  */
+
+function amIWilson(p) {
+  return (p === 5 || p === 13 || p === 563)
+}
+
+console.log((amIWilson(5), true))
+console.log((amIWilson(9), false))
+console.log((amIWilson(6), false))
+
+
 /* #55
  */
 /* #56
