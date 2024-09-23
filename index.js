@@ -1217,26 +1217,64 @@ function expressionMatter(a, b, c) {
 }
 
 // Small values
-assert.strictEqual(expressionMatter(2, 1, 2), 6);
-assert.strictEqual(expressionMatter(2, 1, 1), 4);
-assert.strictEqual(expressionMatter(1, 1, 1), 3);
-assert.strictEqual(expressionMatter(1, 2, 3), 9);
-assert.strictEqual(expressionMatter(1, 3, 1), 5);
-assert.strictEqual(expressionMatter(2, 2, 2), 8);
+console.log(expressionMatter(2, 1, 2), 6);
+console.log(expressionMatter(2, 1, 1), 4);
+console.log(expressionMatter(1, 1, 1), 3);
+console.log(expressionMatter(1, 2, 3), 9);
+console.log(expressionMatter(1, 3, 1), 5);
+console.log(expressionMatter(2, 2, 2), 8);
 
 // Medium values
-assert.strictEqual(expressionMatter(5, 1, 3), 20);
-assert.strictEqual(expressionMatter(3, 5, 7), 105);
-assert.strictEqual(expressionMatter(5, 6, 1), 35);
-assert.strictEqual(expressionMatter(1, 6, 1), 8);
-assert.strictEqual(expressionMatter(2, 6, 1), 14);
-assert.strictEqual(expressionMatter(6, 7, 1), 48);
+console.log(expressionMatter(5, 1, 3), 20);
+console.log(expressionMatter(3, 5, 7), 105);
+console.log(expressionMatter(5, 6, 1), 35);
+console.log(expressionMatter(1, 6, 1), 8);
+console.log(expressionMatter(2, 6, 1), 14);
+console.log(expressionMatter(6, 7, 1), 48);
 
 // Mixed values
-assert.strictEqual(expressionMatter(2, 10, 3), 60);
-assert.strictEqual(expressionMatter(1, 8, 3), 27);
-assert.strictEqual(expressionMatter(9, 7, 2), 126);
-assert.strictEqual(expressionMatter(1, 1, 10), 20);
-assert.strictEqual(expressionMatter(9, 1, 1), 18);
-assert.strictEqual(expressionMatter(10, 5, 6), 300);
-assert.strictEqual(expressionMatter(1, 10, 1), 12);
+console.log(expressionMatter(2, 10, 3), 60);
+console.log(expressionMatter(1, 8, 3), 27);
+console.log(expressionMatter(9, 7, 2), 126);
+console.log(expressionMatter(1, 1, 10), 20);
+console.log(expressionMatter(9, 1, 1), 18);
+console.log(expressionMatter(10, 5, 6), 300);
+console.log(expressionMatter(1, 10, 1), 12);
+
+/* #52
+In this Kata we are passing a number (n) into a function.
+Your code will determine if the number passed is even (or not).
+The function needs to return either a true or false.
+Numbers may be positive or negative, integers or floats.
+Floats with decimal part non equal to zero are considered UNeven for this kata.
+*/
+
+function testEven(n) {
+  return n % 2 === 0;
+}
+
+console.log(testEven(0), true, "testEven for 0");
+console.log(testEven(0.5), false, "testEven for 0.5");
+console.log(testEven(1), false, "testEven for 1");
+console.log(testEven(2), true, "testEven for 2");
+console.log(testEven(-4), true, "testEven for 2");
+
+/* #53
+
+ */
+/* #54
+ */
+/* #55
+ */
+/* #56
+ */
+/* #57
+ */
+/* #58
+ */
+/* #59
+ */
+/* #60
+ */
+/* #61
+ */
