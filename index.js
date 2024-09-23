@@ -1260,8 +1260,65 @@ console.log(testEven(2), true, "testEven for 2");
 console.log(testEven(-4), true, "testEven for 2");
 
 /* #53
-
+Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+For example,
+[true,  true,  true,  false,
+  true,  true,  true,  true ,
+  true,  false, true,  false,
+  true,  false, false, true ,
+  true,  true,  true,  true ,
+  false, false, true,  true]
+The correct answer would be 17.
+Hint: Don't forget to check for bad values like null/undefined
  */
+
+function countSheeps(sheep) {
+  let count = 0
+ const res = sheep.flat(Infinity)
+ res.forEach((el) => {
+  if (el === true)
+    count += 1
+ })
+ return count
+}
+
+console.log(countSheeps([[], 0]));
+console.log(countSheeps([[undefined], 0]));
+console.log(countSheeps([[null], 0]));
+console.log(countSheeps([[false], 0]));
+console.log(countSheeps([[true], 1]));
+console.log(countSheeps([[undefined, null, false, true], 1]));
+console.log(countSheeps([[undefined, null, false, true, true, false, null, undefined], 2]));
+console.log(countSheeps()[
+  [
+    true,
+    true,
+    true,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    true,
+    false,
+    true,
+    false,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    true,
+    true,
+  ],
+  17,
+]);
+
 /* #54
  */
 /* #55
